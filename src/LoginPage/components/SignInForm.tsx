@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Form = () => {
+const SignInForm = () => {
   const [focused, setFocused] = useState<Boolean>(false);
   const focus = () => {
     setFocused(!focused);
@@ -23,7 +23,7 @@ const Form = () => {
           <input
             type="text"
             id="username"
-            className=" outline-1 outline-cyan-500 text-sm w-80 px-5 pt-5 pb-2 rounded-full shadow-md"
+            className=" outline-1 outline-sky-500 text-sm w-80 px-5 pt-5 pb-2 rounded-full shadow-sm"
             onFocus={focus}
             onBlur={focus}
           />
@@ -33,4 +33,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default SignInForm;
