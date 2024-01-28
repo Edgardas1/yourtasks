@@ -2,14 +2,38 @@ import { useState } from "react";
 import Button from "./Button";
 
 const SignInForm = () => {
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
   const [focusedUsername, setFocusedUsername] = useState<Boolean>(false);
   const [focusedPassword, setFocusedPassword] = useState<Boolean>(false);
+
   const focusUsername = () => {
-    setFocusedUsername(!focusedUsername);
+    setFocusedUsername(true);
+  };
+  const unfocusUsername = () => {
+    if (username !== "") {
+      return;
+    }
+    setFocusedUsername(false);
   };
 
   const focusPassword = () => {
-    setFocusedPassword(!focusedPassword);
+    setFocusedPassword(true);
+  };
+
+  const unfocusPassword = () => {
+    if (password !== "") {
+      return;
+    }
+    setFocusedPassword(false);
+  };
+
+  const handleChangeUsername = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(e.currentTarget.value);
+  };
+
+  const handleChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.currentTarget.value);
   };
   return (
     <div className="mt-8">
@@ -33,7 +57,8 @@ const SignInForm = () => {
             id="username"
             className=" outline-1 outline-none text-sm w-80 px-5 pt-5 pb-2 rounded-full shadow-sm"
             onFocus={focusUsername}
-            onBlur={focusUsername}
+            onBlur={unfocusUsername}
+            onChange={(e) => handleChangeUsername(e)}
           />
         </div>
         <div className="relative ">
@@ -52,7 +77,8 @@ const SignInForm = () => {
             id="password"
             className=" outline-1 outline-none text-sm w-80 px-5 pt-5 pb-2 rounded-full shadow-sm"
             onFocus={focusPassword}
-            onBlur={focusPassword}
+            onBlur={unfocusPassword}
+            onChange={(e) => handleChangePassword(e)}
           />
         </div>
         <Button />
