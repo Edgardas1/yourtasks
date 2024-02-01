@@ -83,6 +83,14 @@ const SignInForm = () => {
         </div>
         <Button />
       </form>
+      <div>
+        <p className=" text-center">
+          Don't have an account?{" "}
+          <a href="/register" className="underline">
+            Register
+          </a>
+        </p>
+      </div>
     </div>
   );
 };
