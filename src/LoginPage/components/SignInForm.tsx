@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const SignInForm = () => {
   const [username, setUsername] = useState<string>("");
@@ -86,9 +87,9 @@ const SignInForm = () => {
       <div>
         <p className=" text-center">
           Don't have an account?{" "}
-          <a href="/register" className="underline">
+          <Link to="/register" className="underline">
             Register
-          </a>
+          </Link>
         </p>
       </div>
     </div>
