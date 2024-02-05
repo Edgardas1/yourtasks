@@ -5,7 +5,7 @@ import Button from "./components/Button";
 
 const RegisterPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen ">
+    <div className="flex flex-col items-center justify-center h-dvh">
       <MainText />
       <form className="flex flex-col gap-4 items-center mt-10 mb-4">
         <p className="font-bold text-gray-400 text-xl">Create An Account</p>
