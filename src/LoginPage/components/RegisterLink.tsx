@@ -4,7 +4,7 @@ const RegisterLink = () => {
   return (
     <div>
       <p className=" text-center">
-        Don't have an account?
+        Don't have an account?{" "}
         <Link to="/register" className="underline">
           Register
         </Link>
