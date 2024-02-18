@@ -5,7 +5,13 @@ const mongoose = require('mongoose')
 const User = require('./models/user.model')
 const jwt = require('jsonwebtoken') 
 
-app.use(cors())
+app.use(cors(
+    {
+        origin: ["yourtasks-mocha.vercel.app"],
+        methods: ['POST', 'GET'],
+        credentials: true
+    }
+))
 app.use(express.json())
 
 mongoose.connect('mongodb+srv://Edgard:Narutriks@cluster0.5jggeop.mongodb.net/YourTasks')
