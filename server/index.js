@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken')
 
 app.use(cors(
     {
-        origin: ["yourtasks-delta.vercel.app"],
+        origin: ["https://yourtasks-delta.vercel.app"],
         methods: ['POST', 'GET'],
         credentials: true
     }
