@@ -5,12 +5,7 @@ const mongoose = require('mongoose')
 const User = require('./models/user.model')
 const jwt = require('jsonwebtoken') 
 
-app.use(cors(
-    {
-        origin: ["https://yourtasks-frontend.vercel.app"],
-        methods: ['POST', 'GET'],
-        credentials: true
-    }
+app.use(cors( 
 ))
 app.use(express.json())
 
